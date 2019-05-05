@@ -1,0 +1,29 @@
+#example-component {
+    text-align: center;
+
+    h1 {
+        color: $my_main_color;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        letter-spacing: -3px;
+        font-weight: 100;
+    }
+
+    #name-form {
+        margin: 20px 0;
+
+        input {
+            font-size: 27px;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 0 5px;
+        }
+    }
+
+    #button-container {
+        button {
+            font-size: 24px;
+            border-radius: 3px;
+            padding: 10px 20px;
+        }
+    }
+}
