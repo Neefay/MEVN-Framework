@@ -3,7 +3,7 @@ module.exports = {
 	productionSourceMap: false,
 	devServer: {
 		headers: {
-		"Access-Control-Allow-Origin":"\*"
+			"Access-Control-Allow-Origin":"\*"
 		},
 	},
 	css: {
