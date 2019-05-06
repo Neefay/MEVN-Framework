@@ -1,6 +1,10 @@
 <template>
     <div>
-        What else do you want to know? It's all in the numbers.
+        What else do you want to know.
+        <div>
+            Status: {{ myPage }}
+        </div>
+        <button @click="updateStatus">Update</button>
     </div>
 </template>
 
