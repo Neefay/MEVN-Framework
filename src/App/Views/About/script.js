@@ -10,7 +10,7 @@ export default {
     },
 
     mounted() {
-        axios.get("/api/about").then(r => {
+        axios.get("/api/group/hi").then(r => {
             console.log("API CALLED:", r.data);
             this.myPage = r.data;
         });
@@ -18,7 +18,7 @@ export default {
 
     methods: {
         updateStatus: function() {
-            axios.get("/api/about").then(r => {
+            axios.get("/api/group/hi").then(r => {
                 console.log("API CALLED:", r.data);
                 this.myPage = r.data;
             });

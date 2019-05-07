@@ -27,7 +27,11 @@ const mountAllRoutes = (app, express) => {
                 routeObj = routes_object[k].routes_object;
         for (let i = 0; i < routeObj.routes.length; i++) {
             const rObj = routeObj.routes[i];
-            router[rObj.request](rObj.url, rObj.method);
+            if (rObj.middleware) {
+                router.use(rObj.method)
+            } else {
+                router[rObj.request](rObj.url, rObj.method);
+            }
         }
         app.use(`${(routeObj.api ? "/api" : "")}/${routeObj.entry}`, router);
     }
