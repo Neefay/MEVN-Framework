@@ -1,9 +1,19 @@
 <template>
-    <div id="app">
-        <div id="nav">
-            <router-link to="/">Home</router-link> |
-            <router-link to="/about">About</router-link>
-        </div>
-        <router-view/>
+    <div>
+        <v-app>
+            <Header></Header>
+            <router-view></router-view>
+        </v-app>
     </div>
 </template>
+
+<script>
+import Header from "./Layout/Header"
+
+export default {
+    components: {
+        Header
+    }
+}
+</script>
+

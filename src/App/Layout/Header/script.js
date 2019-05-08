@@ -1,10 +1,20 @@
+
+const navigationBarButtons = [
+    { route: { name: "app.public.homepage" }, text: "Home", icon: "home" },
+    { route: { name: "app.public.about" }, text: "About", icon: "comment-question" }
+]
+
 export default {
-    data() {
-        return {
-            appName: "Dumb App"
-        }
+    data: () => ({
+        navigationBarButtons
+    }),
+
+    computed: {
     },
-    props: {
-        creatorName: String
+
+    mounted() {
+    },
+
+    methods: {
     }
 }

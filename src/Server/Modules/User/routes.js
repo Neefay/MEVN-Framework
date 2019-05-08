@@ -2,7 +2,7 @@ const methods = require("./methods")
 
 const routes_object = {
     entry: "user",
-    api: true,
+    prefix: "api",
     routes: [
         { request: "get", url: "/hi", method: methods.greetUser },
         { middleware: true, method: (req, res, next) => {

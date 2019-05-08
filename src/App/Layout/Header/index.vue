@@ -1,9 +1,22 @@
-
 <template>
-    <div>
-        <h1>Welcome to {{ appName }}, made by {{ creatorName }}.</h1>
-    </div>
+    <nav id="header-component">
+        <v-toolbar prominent dense dark color="primary" app>
+            <v-toolbar-title class="text-uppercase mr-2">
+                <span>Aitagiku</span>
+            </v-toolbar-title>
+
+            <v-btn
+                class="py-4 px-3 mx-0"
+                v-for="(button, index) in navigationBarButtons"
+                :key=index :to=button.route
+                small flat exact
+            >
+                <span>{{ button.text }}</span>
+                <v-icon right>{{ `mdi-${button.icon}` }}</v-icon>
+            </v-btn>
+        </v-toolbar>
+    </nav>
 </template>
 
-<script> export { default } from './script.js'; </script>
-<style lang="scss" scoped> @import "./"; </style>
+<script src="./script.js"></script>
+<style lang="scss" src="./index.scss" scoped></style>
