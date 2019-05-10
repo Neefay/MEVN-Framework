@@ -6,7 +6,7 @@
                     A yet untitled framework made using Vue.js, MongoDB and the Express/Node stack.
                 </strong>
                 <v-spacer></v-spacer>
-                <v-btn class="mx-3" dark icon>
+                <v-btn href="https://github.com/Neefay/MEVN-Framework" target="_blank" class="mx-3" dark icon>
                     <v-icon size="24px">mdi-github-circle</v-icon>
                 </v-btn>
             </v-card-title>
