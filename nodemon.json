@@ -1,4 +1,4 @@
 {
-	"watch": ["./src/Server"],
+	"watch": ["./src/Server", "./src/API/Server"],
 	"ignore": ["./dist/*", "./src/App/**/*"]
 }

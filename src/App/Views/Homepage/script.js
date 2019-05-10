@@ -1,3 +1,5 @@
+import PingServer from "../../Components/PingServer"
+
 export default {
     data: () => ({
     }),
@@ -10,5 +12,9 @@ export default {
         path: "/",
         name: "Homepage",
         public: true
+    },
+
+    components: {
+        PingServer
     }
 }

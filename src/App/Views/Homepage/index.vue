@@ -1,6 +1,10 @@
 <template>
     <div id="homepage-component">
-        Hello Vue.
+        <v-layout align-center justify-center row wrap>
+            <v-flex xs12 sm6 md4>
+                <PingServer></PingServer>
+            </v-flex>
+        </v-layout>
     </div>
 </template>
 

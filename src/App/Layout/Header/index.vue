@@ -2,18 +2,10 @@
     <nav id="header-component">
         <v-toolbar prominent dense dark color="primary" app>
             <v-toolbar-title class="text-uppercase mr-2">
-                <span>Aitagiku</span>
+                <v-icon class="mr-2">mdi-vuetify</v-icon>
+                <span>MEVN Framework</span>
             </v-toolbar-title>
-
-            <v-btn
-                class="py-4 px-3 mx-0"
-                v-for="(button, index) in navigationBarButtons"
-                :key=index :to=button.route
-                small flat exact
-            >
-                <span>{{ button.text }}</span>
-                <v-icon right>{{ `mdi-${button.icon}` }}</v-icon>
-            </v-btn>
+            <ButtonsList :list=navigationBarButtons></ButtonsList>
         </v-toolbar>
     </nav>
 </template>

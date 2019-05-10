@@ -1,9 +1,10 @@
 {
-  "name": "sandbox",
+  "name": "mevn-framework",
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "start-dev": "nodemon --exec vue-cli-service serve",
+    "dev": "npm run serve | npm run server",
+    "server": "nodemon ./src/Server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "lint": "vue-cli-service lint"
@@ -11,6 +12,9 @@
   "dependencies": {
     "axios": "^0.18.0",
     "core-js": "^2.6.5",
+    "cors": "^2.8.5",
+    "dotenv": "^8.0.0",
+    "lodash": "^4.17.11",
     "mongoose": "^5.5.6",
     "morgan": "^1.9.1",
     "vue": "^2.6.10",

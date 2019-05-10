@@ -10,11 +10,12 @@ module.exports = {
 		}
 	},
 	devServer: {
-		before: require('./src/Server/app'),
+		// before: require('./src/Server/app'),
+		historyApiFallback: true,
 		hot: true,
 		hotOnly: true,
+		compress: true,
 		headers: { "Access-Control-Allow-Origin": "\*" },
 		watchContentBase: false,
-		historyApiFallback: true
 	}
 }

@@ -1,18 +1,22 @@
 <template>
     <div>
         <v-app>
-            <Header></Header>
-            <router-view></router-view>
+            <HeaderLayout></HeaderLayout>
+            <v-content>
+                <v-container fluid>
+                    <router-view></router-view>
+                </v-container>
+            </v-content>
         </v-app>
     </div>
 </template>
 
 <script>
-import Header from "./Layout/Header"
+import HeaderLayout from "./Layout/Header"
 
 export default {
     components: {
-        Header
+        HeaderLayout
     }
 }
 </script>

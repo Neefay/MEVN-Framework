@@ -1,8 +1,10 @@
 
 const navigationBarButtons = [
-    { route: { name: "app.public.homepage" }, text: "Home", icon: "home" },
+    { route: { name: "app.public.homepage" }, text: "Quotes", icon: "message" },
     { route: { name: "app.public.about" }, text: "About", icon: "comment-question" }
 ]
+
+import ButtonsList from "../../Components/ButtonList.vue"
 
 export default {
     data: () => ({
@@ -16,5 +18,9 @@ export default {
     },
 
     methods: {
+    },
+
+    components: {
+        ButtonsList
     }
 }
