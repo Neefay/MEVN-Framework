@@ -7,8 +7,8 @@
     "server:dev": "nodemon ./src/Server",
     "serve": "vue-cli-service serve",
     "lint": "vue-cli-service lint",
-    "build": "vue-cli-service build",
-    "start": "node ./src/Server"
+    "start": "node ./src/Server",
+    "build": "vue-cli-service build"
   },
   "dependencies": {
     "axios": "^0.18.0",
