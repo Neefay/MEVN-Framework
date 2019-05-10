@@ -3,7 +3,7 @@
   "version": "0.1.1",
   "scripts": {
     "dev": "npm run serve | npm run server:dev",
-    "server": "node ./src/Server",
+    "server": "node app.js",
     "server:dev": "nodemon ./src/Server",
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
