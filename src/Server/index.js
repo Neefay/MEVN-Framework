@@ -6,4 +6,6 @@ const   http = require('http'),
 
 require('./app')(app, express)
 
+console.log(express);
+
 http.createServer(app).listen(app.get('port'), () => console.log(`API endpoints ready on port ${app.get('port')}.`))
