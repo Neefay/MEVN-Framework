@@ -3,12 +3,12 @@
   "version": "0.1.1",
   "scripts": {
     "dev": "npm run serve | npm run server:dev",
-    "server": "node app.js",
+    "server": "node ./src/Server",
     "server:dev": "nodemon ./src/Server",
     "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build",
     "lint": "vue-cli-service lint",
-    "heroku-postbuild": "vue-cli-service build && npm run server"
+    "build": "vue-cli-service build",
+    "start": "node ./src/Server"
   },
   "dependencies": {
     "axios": "^0.18.0",
