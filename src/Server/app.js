@@ -2,6 +2,7 @@
 const   bodyParser = require('body-parser'),
         morgan = require('morgan'),
         cors = require('cors'),
+        serveStatic = require('serve-static'),
         { resolve } = require('path'),
 
         routes = require('./Config/routes'),
@@ -18,7 +19,7 @@ module.exports = (app, e) => {
     app.use(cors())
     app.use(morgan('dev'))
 
-    app.use(e.static(publicPath, staticConf))
+    app.use(serveStatic(publicPath, staticConf))
 
     routes.setup(app)
     db().then(() => console.log("SERVER:", "Connected to the database."));
