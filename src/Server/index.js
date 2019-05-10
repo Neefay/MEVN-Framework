@@ -1,14 +1,9 @@
 require('dotenv').config()
 
-const   { resolve } = require('path'),
+const   http = require('http'),
         express = require('express'),
-        PORT = process.env.PORT,
-        app = express(),
+        app = express()
 
-        publicPath = resolve(__dirname, '../../dist'),
-        staticConf = { maxAge: '1y', etag: false }
+require('./app')(app, express)
 
-require('./app')(app)
-app.use(express.static(publicPath, staticConf))
-
-app.listen(PORT, () => console.log("SERVER:", `API endpoints ready on port ${PORT}.`))
+http.createServer(app).listen(app.get('port'), () => console.log(`API endpoints ready on port ${app.get('port')}.`))

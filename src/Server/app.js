@@ -2,16 +2,23 @@
 const   bodyParser = require('body-parser'),
         morgan = require('morgan'),
         cors = require('cors'),
+        { resolve } = require('path'),
 
         routes = require('./Config/routes'),
-        db = require('./Config/db')
+        db = require('./Config/db'),
 
-module.exports = app => {
+        publicPath = resolve(__dirname, '../../dist'),
+        staticConf = { maxAge: '1y', etag: false };
+
+module.exports = (app, e) => {
     app.use(bodyParser.urlencoded({ extended: true }))
     app.use(bodyParser.json({ limit: '1mb' }))
 
+    app.set('port', process.env.PORT);
     app.use(cors())
     app.use(morgan('dev'))
+
+    app.use(e.static(publicPath, staticConf))
 
     routes.setup(app)
     db().then(() => console.log("SERVER:", "Connected to the database."));
