@@ -1,18 +1,14 @@
 require('dotenv').config()
-const { resolve } = require('path')
-const express = require('express')
-const configureAPI = require('./app')
-const app = express()
 
-const { PORT = 8080 } = process.env
+const   { resolve } = require('path'),
+        express = require('express'),
+        PORT = process.env.PORT,
+        app = express(),
 
-configureAPI(app)
+        publicPath = resolve(__dirname, '../../dist'),
+        staticConf = { maxAge: '1y', etag: false }
 
-const publicPath = resolve(__dirname, '../../dist')
-const staticConf = { maxAge: '1y', etag: false }
-
-console.log(publicPath);
-
+require('./app')(app)
 app.use(express.static(publicPath, staticConf))
 
-app.listen(PORT, () => console.log(`App running on port ${PORT}!`))
+app.listen(PORT, () => console.log("SERVER:", `API endpoints ready on port ${PORT}.`))

@@ -1,9 +1,8 @@
 
-const   express = require('express'),
-        path = require('path'),
-        bodyParser = require('body-parser'),
+const   bodyParser = require('body-parser'),
         morgan = require('morgan'),
         cors = require('cors'),
+
         routes = require('./Config/routes'),
         db = require('./Config/db')
 
@@ -15,5 +14,5 @@ module.exports = app => {
     app.use(morgan('dev'))
 
     routes.setup(app)
-    db().then(() => console.log("Connected to the database."));
+    db().then(() => console.log("SERVER:", "Connected to the database."));
 }
