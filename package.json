@@ -1,7 +1,6 @@
 {
   "name": "mevn-framework",
   "version": "0.1.1",
-  "private": true,
   "scripts": {
     "dev": "npm run serve | npm run server:dev",
     "server": "node ./src/Server",
